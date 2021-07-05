@@ -53,6 +53,7 @@ for example:
 ```         
 
 ###How continue?
+- Integrate Terragrunt
 - Left automatize creation chatbot using terraform, today's manually
 - Add Unit Test
 - Add more logs         
