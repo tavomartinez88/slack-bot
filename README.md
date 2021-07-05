@@ -1,22 +1,22 @@
 # slack-bot
 
-###Tech used:
+### Tech used:
 - Go >= 1.15
 - AWS(Dynamo-Lambda-Sns-Chatbot)
 - Slack
 - Terraform >= v0.13.2
 
-###Build Lambda
+### Build Lambda
 cd lambda/slack-bot-release-aws-lambda/ && sh build.sh
 
-###Terraform
+### Terraform
 - cd terraform
     - set profile and region in main.tf
     - terraform init
     - terraform plan
     - terraform apply --auto-approve=true   
 
-###Create Chatbot    
+### Create Chatbot    
 -  You should access to aws chatbot under aws console
 -  Choose Slack as client
     -  Choose the workspace in dropdown list
@@ -37,7 +37,7 @@ cd lambda/slack-bot-release-aws-lambda/ && sh build.sh
         - select topic  
 -   Finally, click on configure button
 
-###How do you should use it?
+### How do you should use it?
 @aws lambda invoke --function-name [name] --region [region] --payload [json]
 
 for example:
@@ -57,7 +57,7 @@ for example:
 }  
 ```         
 
-###How continue?
+### How continue?
 - Integrate Terragrunt
 - Left automatize creation chatbot using terraform, today's manually
 - Add Unit Test
