@@ -1,5 +1,10 @@
 # slack-bot
 
+###Tech used:
+- Go >= 1.15
+- AWS(Dynamo-Lambda-Sns-Chatbot)
+- Slack
+- Terraform >= v0.13.2
 
 ###Build Lambda
 cd lambda/slack-bot-release-aws-lambda/ && sh build.sh
