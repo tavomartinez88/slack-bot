@@ -6,7 +6,7 @@
 *.dylib
 
 .terraform
-./lambda/bin/
+lambda/bin/
 terraform.*
 
 # Test binary, built with `go test -c`
