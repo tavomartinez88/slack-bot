@@ -5,7 +5,7 @@
 - AWS(Dynamo-Lambda-Sns-Chatbot)
 - Slack
 - Terraform >= v0.13.2
-- mockgen >= v1.6.0
+- golang mock >= v1.6.0
 
 ### Build Lambda
 cd lambda/slack-bot-release-aws-lambda/ && sh build.sh
@@ -47,10 +47,10 @@ for example:
 --region us-east-1 
 --payload {
     “title”: “titulo”,
-    “description”: “se corrigio algo”,
-    “product”: “Debit”,
+    “description”: “se realizo refacto de ...”,
+    “product”: “MyProduct”,
     “detail”: “https://any-endpoint.com”,
-    “team”: “Transaccional”,
+    “team”: “MyTeam”,
     “status”: “IMPLEMENTADO”,
     “owner”: “Gustavo Martinez”,
     “result”: “EXITOSO”,
