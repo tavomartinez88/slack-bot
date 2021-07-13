@@ -1,11 +1,21 @@
 # slack-bot
 
+![](https://img.shields.io/static/v1?label=Aws%20&message=3.27&color=informational)
+![](https://img.shields.io/github/go-mod/go-version/tavomartinez88/slack-bot/main)
+![](https://img.shields.io/static/v1?label=Terraform%20&message=0.13.2&color=informational&)
+![](https://img.shields.io/static/v1?label=gomock%20&message=1.6.0&color=informational)
+![](https://img.shields.io/github/languages/count/tavomartinez88/slack-bot)
+![](https://img.shields.io/github/languages/top/tavomartinez88/slack-bot)
+![](https://img.shields.io/github/issues-pr/tavomartinez88/slack-bot)
+![](https://img.shields.io/github/v/tag/tavomartinez88/slack-bot?include_prereleases)
+![](https://img.shields.io/github/contributors/tavomartinez88/slack-bot)
+![](https://img.shields.io/github/last-commit/tavomartinez88/slack-bot)
 ### Tech used:
 - Go >= 1.15
 - AWS(Dynamo-Lambda-Sns-Chatbot)
 - Slack
 - Terraform >= v0.13.2
-- golang mock >= v1.6.0
+- gomock >= v1.6.0
 
 ### Build Lambda
 cd lambda/slack-bot-release-aws-lambda/ && sh build.sh
@@ -25,7 +35,7 @@ cd lambda/slack-bot-release-aws-lambda/ && sh build.sh
     - On details set any name, e.g. bot-para-notificar-releases
         - Note: not check logging. it apply charge
     - Under Channel type, choose Private
-    - Enter channel ID
+    - Enter channel ID (e.g. T026YK7T0Q5)
         - if you haven't any channel, you shoud go to slack for create channel
         - if you have channel for it, enter id. (On my case it's C0271L15MBL)
     - Permissions
