@@ -69,7 +69,4 @@ for example:
 ```         
 
 ### Documentation
-![alt text](docs/Slack-bot.png?raw=true)
-
-### How continue?
-- Integrate Terragrunt     
+![alt text](docs/Slack-bot.png?raw=true)   
