@@ -62,19 +62,7 @@ func verifyFields(request models.Request) (bool, error) {
 		return false, err
 	}
 
-	err = verifyField(request.Status, "Status is required")
-
-	if err != nil {
-		return false, err
-	}
-
 	err = verifyField(request.Owner, "Owner is required")
-
-	if err != nil {
-		return false, err
-	}
-
-	err = verifyField(request.Result, "Result is required")
 
 	if err != nil {
 		return false, err

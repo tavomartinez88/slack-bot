@@ -62,7 +62,4 @@ for example:
 ![alt text](docs/Slack-bot.png?raw=true)
 
 ### How continue?
-- Integrate Terragrunt
-- Left automatize creation chatbot using terraform, today's manually
-- Add Unit Test
-- Add more logs         
+- Integrate Terragrunt     
