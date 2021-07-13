@@ -10,23 +10,17 @@ import (
 
 var tableName = "Releases"
 
-type dynamo struct{}
+type slackBotDb struct{}
 
-func GetDynamo() *dynamo {
-	return &dynamo{}
+func GetSlackBotDb() *slackBotDb {
+	return &slackBotDb{}
 }
 
-func (d *dynamo) GetSession() *session.Session {
-	return session.Must(session.NewSessionWithOptions(session.Options{
+func (d *slackBotDb) CreateRelease(model models.Request) error {
+	client :=  dynamodb.New(session.Must(session.NewSessionWithOptions(session.Options{
 		SharedConfigState: session.SharedConfigEnable,
-	}))
-}
+	})))
 
-func (d *dynamo) GetClient(s *session.Session) *dynamodb.DynamoDB {
-	return dynamodb.New(s)
-}
-
-func (d *dynamo) CreateRelease(model models.Request) error {
 	item, err := dynamodbattribute.MarshalMap(model)
 
 	if err != nil {
@@ -38,7 +32,7 @@ func (d *dynamo) CreateRelease(model models.Request) error {
 		TableName: aws.String(tableName),
 	}
 
-	_, err = d.GetClient(d.GetSession()).PutItem(doc)
+	_, err = client.PutItem(doc)
 
 	if err != nil {
 		return err

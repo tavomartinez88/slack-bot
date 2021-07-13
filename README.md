@@ -5,6 +5,7 @@
 - AWS(Dynamo-Lambda-Sns-Chatbot)
 - Slack
 - Terraform >= v0.13.2
+- mockgen >= v1.6.0
 
 ### Build Lambda
 cd lambda/slack-bot-release-aws-lambda/ && sh build.sh
